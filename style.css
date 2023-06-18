@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    background: #dadada;
+}
+
+nav {
+    height: 10vh;
+    padding: 1rem;
+    background: linear-gradient(45deg, #5dc4d5, #4f98e0);
+    font-size: 16px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav h1 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    width: 50%;
+    height: 80vh;
+    margin: 2rem 0rem;
+    justify-content: center;
+    align-items: start;
+    background: linear-gradient(143deg, #4c8ee2, #62d5d0);
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem auto;
+    box-shadow: 0px 0px 5px 3px;
+    border-radius: 10px;
+}
+
+.hambIcon {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.hambIcon:hover {
+    color: white;
+}
+
+#add {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid transparent;
+    width: 75%;
+    position: absolute;
+    backdrop-filter: blur(7px);
+    top: 15vh;
+    transform: scale(0);
+    background: linear-gradient(45deg, #12a2ee14, #5fcad3);
+    z-index: 2;
+    transition: all .1s;
+    border-radius: 20px;
+    border-top: none;
+    perspective: 100px;
+    padding: 0.1rem;
+    box-shadow: 1px 1px 9px -1px #36405ebf;
+    flex-direction: column;
+    color: white;
+    border: 2px solid transparent;
+    font-weight: 400;
+
+}
+
+#add>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    /* border: 2px solid black; */
+    padding: 1rem;
+}
+
+#add span {
+    width: 35%;
+    text-align: start;
+}
+
+#add>div div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+#add input,
+#add textarea {
+    width: 65%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+}
+
+#btn {
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background: #dadada;
+}
+
+.addCloseIcon {
+    transition: all .5s;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    top: 10px;
+    color: black;
+}
+
+.addCloseIcon:hover {
+    rotate: 360deg;
+    color: white;
+}
+
+#itemsElem {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    overflow-y: scroll;
+    height: fit-content;
+    flex-wrap: wrap;
+    min-height: 50vh;
+}
+
+#pending {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#itemsElem::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+#itemsElem::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+
+#itemsElem::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    min-width: 45%;
+    min-height: 12vh;
+    justify-content: space-between;
+    align-items: center;
+    background: #add8e64d;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 10px;
+    flex-wrap: wrap;
+    perspective: 10px;
+}
+
+.date {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #181812;
+}
+
+.dateIcon {
+    width: 10px !important;
+    padding-right: 5px !important;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    transform: traslatez(30px);
+}
+
+.desc {
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: capitalize;
+    transform: traslatez(30px);
+}
+
+.items ion-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    background: rgb(255 232 232 / 40%);
+}
+
+.btnDelete:hover {
+    background-color: #d67373db;
+}
+
+.btnEdit:hover {
+    background-color: #8dd68dcc;
+}
+
+/* scrollbar Desinng */
+@media only screen and (max-width: 600px) {
+    #main {
+        background-color: lightblue;
+    }
+
+    #add>div div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #add input,
+    #add textarea {
+        width: 100%;
+    }
+    #add span{
+        width: fit-content;
+    }
+    section{
+        width: 90%;
+        overflow-x: hidden;
+        height: 85%;
+    }
+    .items{
+        min-height: 10vh;
+        flex-grow: 1;
+    }
+}

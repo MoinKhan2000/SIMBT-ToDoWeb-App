@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Notes Saving Web</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <nav>
+            <span>
+                <h1>To-Do WebApp [Save Your Notes Here]</h1>
+            </span>
+        </nav>
+        <section>
+            <div class="hambIcon">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <div id="add">
+                <div>
+                    <div>
+                        <span>Title </span> <input type="text" name="" id="forTit">
+                    </div>
+                    <div>
+                        <span>Description </span><textarea name="description" id="forDesc" cols="30"
+                            rows="2"></textarea>
+                    </div>
+                </div>
+                <button type="submit" id="btn">Add Note</button>
+                <ion-icon name="close-sharp" class="addCloseIcon"></ion-icon>
+            </div>
+            <span id="pending" data-tilt>
+            </span>
+            <div id="itemsElem" class="item">
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+        integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.0.3/tilt.jquery.min.js"
+        integrity="sha512-14AZ/DxUrlF26z6v7egDkpJHKyJRn/7ue2BgpWZ/fmqrqVzf4PrQnToy99sHmKwzKev/VZ1tjPxusuTV/n8CcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
